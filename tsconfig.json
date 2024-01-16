@@ -1,0 +1,25 @@
+{
+  "extends": "@penjj/tsconfig",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "unplugin-vue-router/runtime": [
+        "node_modules/unplugin-vue-router/runtime"
+      ]
+    },
+    "types": ["vite/client"],
+    "allowJs": true
+  },
+  "include": [
+    ".gen/typed-router.d.ts",
+    ".gen/**.d.ts",
+    "vite.config.ts",
+    "uno.config.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ]
+}
